@@ -4,6 +4,7 @@
     class Person{
         private $name;
         private $email;
+        private static $ageLimit = 50;
 
         // create a constructor
         public function __construct($name, $email){
@@ -35,6 +36,10 @@
         // getters for email variable
         public function getEmail(){
             return $this->email;
+        }
+
+        public static function getAgeLimit(){
+            return self::$ageLimit;
         }
     }
 
@@ -144,11 +149,11 @@
     <div class="flex-center position-ref full-height">
             
             <div class="content">
-                <div class="title m-b-md">
-                    Hello <?php echo $customer1->getName(); ?>!
-                    <h6>Your email address is: <strong><?php echo $customer1->getEmail(); ?></strong></h6>
-                    <h6>You have: $<strong><?php echo number_format($customer1->getBalance(), 2, ',', '.'); ?> on your account.</strong></h6>
-                </div>                
+
+                <h1><?php 
+                        // static properties and maethods
+                        echo Person::getAgeLimit(); 
+                    ?></h1>              
                 <div class="title m-b-md">
                     Hello <?php echo $customer2->getName(); ?>!
                     <h6>Your email address is: <strong><?php echo $customer2->getEmail(); ?></strong></h6>
