@@ -5,7 +5,7 @@ We can imagine our universe made of different objects like sun, earth, moon etc.
 Object Oriented Concepts
 Before we go in detail, lets define important terms related to Object Oriented Programming.
 
-Class − This is a programmer-defined data type, which includes local functions as well as local data. You can think of a class as a template for making many instances of the same kind (or class) of object.
+<b>Class</b> − This is a programmer-defined data type, which includes local functions as well as local data. You can think of a class as a template for making many instances of the same kind (or class) of object.
 
 Object − An individual instance of the data structure defined by a class. You define a class once and then make many objects that belong to it. Objects are also known as instance.
 
