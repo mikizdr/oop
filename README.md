@@ -13,7 +13,7 @@ Before we go in detail, lets define important terms related to Object Oriented P
 
 <b>Member function</b> − These are the function defined inside a class and are used to access object data.
 
-<b>Inheritance<b> − When a class is defined by inheriting existing function of a parent class then it is called inheritance. Here child class will inherit all or few member functions and variables of a parent class.
+<b>Inheritance</b> − When a class is defined by inheriting existing function of a parent class then it is called inheritance. Here child class will inherit all or few member functions and variables of a parent class.
 
 <b>Parent class</b> − A class that is inherited from by another class. This is also called a base class or super class.
 
