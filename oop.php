@@ -12,6 +12,11 @@
             echo '<h6>'.__CLASS__.'</h6> created';
         }
 
+        // destroy class
+        public function __destruct(){
+            echo __CLASS__.' destroyed';
+        }
+
         // setters for name variable
         public function setName($name) {
             $this->name = $name;
