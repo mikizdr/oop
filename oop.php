@@ -9,12 +9,12 @@
         public function __construct($name, $email){
             $this->name = $name;
             $this->email = $email;
-            echo '<h6>'.__CLASS__.'</h6> created';
+            echo __CLASS__.' created<br>';
         }
 
         // destroy class
         public function __destruct(){
-            echo __CLASS__.' destroyed';
+            echo __CLASS__.' destroyed<br>';
         }
 
         // setters for name variable
@@ -28,8 +28,8 @@
         }
 
         // setters for email variable
-        public function setEmail($name) {
-            $this->email = $name;
+        public function setEmail($email) {
+            $this->email = $email;
         }
         
         // getters for email variable
@@ -39,13 +39,39 @@
     }
 
     // instantiate class Person and make a new object person1
-    $person1 = new Person('Леа Здравковић', 'lea.zdravkovic@gmail.com');
-    
+    // $person1 = new Person('Леа Здравковић', 'lea.zdravkovic@gmail.com');
     //$person1->setName('Леа Здравковић');
-
     //$person1->setEmail('lea.zdravkovic@gmail.com');
-
     //$person1->name = 'Леа Здравковић';
+
+    // create class that inherites methods and properties from the parent class
+    class Customer extends Person {
+        private $balance;
+
+        public function __construct($name, $email, $balance){
+            parent::__construct($name, $email, $balance);
+            $this->balance = $balance;
+            echo 'A new'.__CLASS__.' has been created';
+        }
+
+        public function __destruct(){
+            echo 'The class'.__CLASS__.' has been destroyed.';
+        }
+
+        // setters for balance variable
+        public function setBalance($balance) {
+            $this->balance = $balance;
+        }
+        
+        // getters for balance variable
+        public function getBalance(){
+            return $this->balance;
+        }
+
+    }
+
+    $customer1 = new Customer('Miroslav Zdravkovic', 'mikizdr@yahoo.com', 600000);
+    $customer2 = new Customer('Lea Zdravkovic', 'lea.zdravkovic@yahoo.com', 10000000);
 
     
 
@@ -119,8 +145,14 @@
             
             <div class="content">
                 <div class="title m-b-md">
-                    Hello <?php echo $person1->getName(); ?>!
-                    <h6>Your email address is: <strong><?php echo $person1->getEmail(); ?></strong></h6>
+                    Hello <?php echo $customer1->getName(); ?>!
+                    <h6>Your email address is: <strong><?php echo $customer1->getEmail(); ?></strong></h6>
+                    <h6>You have: $<strong><?php echo number_format($customer1->getBalance(), 2, ',', '.'); ?> on your account.</strong></h6>
+                </div>                
+                <div class="title m-b-md">
+                    Hello <?php echo $customer2->getName(); ?>!
+                    <h6>Your email address is: <strong><?php echo $customer2->getEmail(); ?></strong></h6>
+                    <h6>You have: $<strong><?php echo number_format($customer2->getBalance(), 2, ',', '.'); ?> on your account.</strong></h6>
                 </div>
             </div>
         </div>
