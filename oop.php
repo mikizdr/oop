@@ -44,10 +44,10 @@
     }
 
     // instantiate class Person and make a new object person1
-    // $person1 = new Person('Леа Здравковић', 'lea.zdravkovic@gmail.com');
-    //$person1->setName('Леа Здравковић');
-    //$person1->setEmail('lea.zdravkovic@gmail.com');
-    //$person1->name = 'Леа Здравковић';
+    // $person1 = new Person('Име Презиме', 'email1@gmail.com');
+    //$person1->setName('Име Презиме');
+    //$person1->setEmail('email2@gmail.com');
+    //$person1->name = 'Име Презиме';
 
     // create class that inherites methods and properties from the parent class
     class Customer extends Person {
@@ -75,8 +75,8 @@
 
     }
 
-    $customer1 = new Customer('Miroslav Zdravkovic', 'mikizdr@yahoo.com', 600000);
-    $customer2 = new Customer('Lea Zdravkovic', 'lea.zdravkovic@yahoo.com', 10000000);
+    $customer1 = new Customer('Име Презиме', 'email1@yahoo.com', 600000);
+    $customer2 = new Customer('Име1 Презиме1', 'email2@yahoo.com', 10000000);
 
     
 
